@@ -1,16 +1,5 @@
 # isolateexample
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Flutter applications are single-threaded applications; this single thread is also called the "main()" thread. You can find this main() thread in the "main.dart" file.
+Now the problem is that if you use this single thread for multiple tasks like UI rendering, API calls, State-management, and Business logic, then you will see some micro stutter in your application. This stuttering or drop frame is mostly observed while running animations like app drawer, drop-down menu, pop-up dialog, etc. The solution for this problem is to use a separate thread for executing heavy tasks. Hence the multi-threading implementation comes.
+In flutter, there is a class called "Isolate", which executes any tasks isolated from the main thread. You can read more about this Isolate class from this URL: https://api.dart.dev/.../dart-isolate/Isolate-class.html
